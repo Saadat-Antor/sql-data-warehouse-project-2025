@@ -24,7 +24,7 @@ Concentrate solely on the most recent dataset; historical data archiving is not 
 
 - **Documentation:**
 Develop comprehensive documentation of the data model to assist business stakeholders and analytics teams.
-
+---
 ### Business Intelligence: Analytics & Reporting (Data Analysis)
 
 **Objective:**
