@@ -4,6 +4,8 @@ Welcome to the Data Warehouse and Analytics Project 2025 repository! 🚀
 
 This project provides a complete data warehousing and analytics solution, covering the construction of a data warehouse and the extraction of actionable insights. Designed as a portfolio project, it emphasizes industry best practices in data engineering and analytics.
 
+---
+
 ## 🚀 Project Requirements
 
 ### Data Warehouse Development (Data Engineering)
