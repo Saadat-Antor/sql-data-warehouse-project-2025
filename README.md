@@ -16,23 +16,24 @@ Incorporate data from two primary systems—ERP and CRM—provided in CSV format
 - Data Quality:
 Perform data cleansing to address and rectify any quality issues before analysis.
 
-Integration:
+- Integration:
 Merge data from both sources into a cohesive, user-friendly model optimized for analytical queries.
 
-Scope:
+- Scope:
 Concentrate solely on the most recent dataset; historical data archiving is not necessary.
 
-Documentation:
+- Documentation:
 Develop comprehensive documentation of the data model to assist business stakeholders and analytics teams.
 
-Business Intelligence: Analytics & Reporting (Data Analysis)
+### Business Intelligence: Analytics & Reporting (Data Analysis)
 
-Objective:
+**Objective:**
 Create SQL-based analytical solutions to provide in-depth insights into:
 
-Customer Behavior
-Product Performance
-Sales Trends
+- Customer Behavior
+- Product Performance
+- Sales Trends
+
 These insights will equip stakeholders with essential business metrics, supporting strategic decision-making.
 
 For additional information, please refer to docs/requirements.md.
