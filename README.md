@@ -1,23 +1,37 @@
 # Data Warehouse and Data Analytics Project 2025
 
 ## 🚀 Project Requirements
-Building the Data Warehouse (Data Engineering)
-Objective
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
 
-Specifications
-Data Sources: Import data from two source systems (ERP and CRM) provided as CSV files.
-Data Quality: Cleanse and resolve data quality issues prior to analysis.
-Integration: Combine both sources into a single, user-friendly data model designed for analytical queries.
-Scope: Focus on the latest dataset only; historization of data is not required.
-Documentation: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
-BI: Analytics & Reporting (Data Analysis)
-Objective
-Develop SQL-based analytics to deliver detailed insights into:
+Data Warehouse Development (Data Engineering)
+
+Objective:
+Construct a contemporary data warehouse utilizing SQL Server to centralize sales information, facilitating analytical reporting and informed business decisions.
+
+Specifications:
+
+Data Sources:
+Incorporate data from two primary systems—ERP and CRM—provided in CSV format.
+
+Data Quality:
+Perform data cleansing to address and rectify any quality issues before analysis.
+
+Integration:
+Merge data from both sources into a cohesive, user-friendly model optimized for analytical queries.
+
+Scope:
+Concentrate solely on the most recent dataset; historical data archiving is not necessary.
+
+Documentation:
+Develop comprehensive documentation of the data model to assist business stakeholders and analytics teams.
+
+Business Intelligence: Analytics & Reporting (Data Analysis)
+
+Objective:
+Create SQL-based analytical solutions to provide in-depth insights into:
 
 Customer Behavior
 Product Performance
 Sales Trends
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.
+These insights will equip stakeholders with essential business metrics, supporting strategic decision-making.
 
-For more details, refer to docs/requirements.md.
+For additional information, please refer to docs/requirements.md.
