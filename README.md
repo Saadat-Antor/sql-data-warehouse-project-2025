@@ -37,3 +37,8 @@ Create SQL-based analytical solutions to provide in-depth insights into:
 These insights will equip stakeholders with essential business metrics, supporting strategic decision-making.
 
 For additional information, please refer to docs/requirements.md.
+
+---
+
+## 🛡️ License
+This project is licensed under the MIT License. You are free to use, modify, and share this project with proper attribution.
