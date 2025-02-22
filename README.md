@@ -5,6 +5,7 @@
 Data Warehouse Development (Data Engineering)
 
 Objective:
+
 Construct a contemporary data warehouse utilizing SQL Server to centralize sales information, facilitating analytical reporting and informed business decisions.
 
 Specifications:
