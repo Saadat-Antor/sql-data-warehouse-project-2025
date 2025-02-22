@@ -10,10 +10,10 @@ Construct a contemporary data warehouse utilizing SQL Server to centralize sales
 
 **Specifications:**
 
-Data Sources:
+- Data Sources:
 Incorporate data from two primary systems—ERP and CRM—provided in CSV format.
 
-Data Quality:
+- Data Quality:
 Perform data cleansing to address and rectify any quality issues before analysis.
 
 Integration:
