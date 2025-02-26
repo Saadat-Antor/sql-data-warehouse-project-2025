@@ -74,7 +74,8 @@ BEGIN
 		WHERE flag_last = 1; -- keeping records that ranks first
 		SET @end_time = GETDATE();
 		PRINT '>> Load Duration: ' + CAST(DATEDIFF(second, @start_time, @end_time)	AS NVARCHAR) + ' seconds';
-
+		PRINT '===================================='
+			
 
 		-- =============== silver.crm_prd_info ===============
 		SET @start_time = GETDATE();
@@ -113,7 +114,8 @@ BEGIN
 		FROM bronze.crm_prd_info
 		SET @end_time = GETDATE();
 		PRINT '>> Load Duration: ' + CAST(DATEDIFF(second, @start_time, @end_time)	AS NVARCHAR) + ' seconds';
-
+		PRINT '===================================='
+			
 
 		-- =============== silver.crm_sales_details ===============
 		SET @start_time = GETDATE();
@@ -160,7 +162,8 @@ BEGIN
 		FROM bronze.crm_sales_details
 		SET @end_time = GETDATE();
 		PRINT '>> Load Duration: ' + CAST(DATEDIFF(second, @start_time, @end_time)	AS NVARCHAR) + ' seconds';
-
+		PRINT '===================================='
+			
 
 		-- =============== silver.erp_cust_az12 ===============
 		SET @start_time = GETDATE();
@@ -189,7 +192,8 @@ BEGIN
 		FROM bronze.erp_cust_az12
 		SET @end_time = GETDATE();
 		PRINT '>> Load Duration: ' + CAST(DATEDIFF(second, @start_time, @end_time)	AS NVARCHAR) + ' seconds';
-
+		PRINT '===================================='
+			
 
 		-- =============== silver.erp_loc_a101 ===============
 		SET @start_time = GETDATE();
@@ -212,7 +216,8 @@ BEGIN
 		FROM bronze.erp_loc_a101
 		SET @end_time = GETDATE();
 		PRINT '>> Load Duration: ' + CAST(DATEDIFF(second, @start_time, @end_time)	AS NVARCHAR) + ' seconds';
-
+		PRINT '===================================='
+			
 
 		-- =============== silver.erp_px_cat_g1v2 ===============
 		SET @start_time = GETDATE();
