@@ -213,7 +213,7 @@ BEGIN
 		FROM bronze.erp_px_cat_g1v2
 		SET @end_time = GETDATE();
 		PRINT '>> Load Duration: ' + CAST(DATEDIFF(second, @start_time, @end_time)	AS NVARCHAR) + ' seconds';
-		PRINT('***************************')
+		PRINT('===============================')
 		SET @batch_end_time = GETDATE();
 		PRINT '>> Total Load Duration: ' + CAST(DATEDIFF(second, @batch_start_time, @batch_end_time)	AS NVARCHAR) + ' seconds';
 	END TRY
