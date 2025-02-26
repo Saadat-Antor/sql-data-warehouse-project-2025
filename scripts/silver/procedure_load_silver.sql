@@ -139,7 +139,7 @@ INSERT INTO silver.erp_loc_a101 (
 SELECT
 -- omitting the '-' from cid to match the cust_key primary key
 REPLACE(cid,'-','') AS cid,
--- increasing verbocity in cntry, ensuring data standardization
+-- increasing verbocity and handle missing country name in cntry, ensuring data standardization
 CASE WHEN UPPER(TRIM(cntry)) = 'DE' THEN 'Germany'
 	 WHEN UPPER(TRIM(cntry)) IN ('US', 'USA') THEN 'United States'
 	 WHEN UPPER(TRIM(cntry)) = '' OR cntry IS NULL THEN 'n/a'
