@@ -1,3 +1,24 @@
+/*
+===============================================================================
+Stored Procedure: Load Silver Layer (Source -> Bronze)
+===============================================================================
+Script Purpose:
+    This stored procedure loads data into the 'silver' schema from external CSV files. 
+    It performs the following actions:
+    - Truncates the bronze tables before loading data.
+    - Uses the `INSERT` command to load data from csv Files to silver tables.
+    - Uses GETDATE and DATEDIFF to determine the duration of data loading
+    - Handles errors
+
+Parameters:
+    None. 
+	  This stored procedure does not accept any parameters or return any values.
+
+Usage Example:
+    EXEC silver.load_silver;
+===============================================================================
+*/
+
 -- creating a procedure to load data to all the table
 CREATE OR ALTER PROCEDURE silver.load_silver AS
 BEGIN
@@ -213,9 +234,11 @@ BEGIN
 		FROM bronze.erp_px_cat_g1v2
 		SET @end_time = GETDATE();
 		PRINT '>> Load Duration: ' + CAST(DATEDIFF(second, @start_time, @end_time)	AS NVARCHAR) + ' seconds';
-		PRINT('===============================')
+		PRINT '===================================='
+		PRINT 'Loading the Bronze Layer has completed.'
 		SET @batch_end_time = GETDATE();
 		PRINT '>> Total Load Duration: ' + CAST(DATEDIFF(second, @batch_start_time, @batch_end_time)	AS NVARCHAR) + ' seconds';
+		PRINT '===================================='
 	END TRY
 	BEGIN CATCH
 		PRINT '******************************************';
