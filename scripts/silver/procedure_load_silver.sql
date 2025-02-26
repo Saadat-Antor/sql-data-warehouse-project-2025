@@ -133,6 +133,7 @@ FROM bronze.erp_cust_az12
 
 
 -- =============== silver.erp_loc_a101 ===============
+-- inserting into the table
 INSERT INTO silver.erp_loc_a101 (
 	cid,
 	cntry)
@@ -147,4 +148,18 @@ CASE WHEN UPPER(TRIM(cntry)) = 'DE' THEN 'Germany'
 END AS cntry
 FROM bronze.erp_loc_a101
 
-SELECT * FROM silver.erp_loc_a101
+
+-- =============== silver.erp_px_cat_g1v2 ===============
+-- inserting into the table
+INSERT INTO silver.erp_px_cat_g1v2(
+	id,
+	cat,
+	subcat,
+	maintenance)
+-- data quality is good, thus no transformation is required 
+SELECT
+id,
+cat,
+subcat,
+maintenance
+FROM bronze.erp_px_cat_g1v2
