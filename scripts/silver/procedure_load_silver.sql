@@ -1,4 +1,7 @@
 -- =============== silver.crm_cust_info ===============
+PRINT('Truncating table: silver.crm_cust_info')
+TRUNCATE TABLE silver.crm_cust_info;
+PRINT('Loading data into table:silver.crm_cust_info')
 -- inserting data into the table
 INSERT INTO silver.crm_cust_info(
 	cst_id,
@@ -35,7 +38,11 @@ WHERE cst_id IS NOT NULL -- handling NULL values
 )t
 WHERE flag_last = 1; -- keeping records that ranks first
 
+
 -- =============== silver.crm_prd_info ===============
+PRINT('Truncating table: silver.crm_prd_info')
+TRUNCATE TABLE silver.crm_prd_info;
+PRINT('Loading data into table:silver.crm_prd_info')
 -- inserting the cleaned data into the table
 INSERT INTO silver.crm_prd_info(
 	prd_id,
@@ -69,6 +76,9 @@ FROM bronze.crm_prd_info
 
 
 -- =============== silver.crm_sales_details ===============
+PRINT('Truncating table: silver.crm_sales_details')
+TRUNCATE TABLE silver.crm_sales_details;
+PRINT('Loading data into table: silver.crm_sales_details')
 -- inserting data into the table
 INSERT INTO silver.crm_sales_details(
 	sls_ord_num,
@@ -110,6 +120,9 @@ FROM bronze.crm_sales_details
 
 
 -- =============== silver.erp_cust_az12 ===============
+PRINT('Truncating table: silver.erp_cust_az12')
+TRUNCATE TABLE silver.erp_cust_az12;
+PRINT('Loading data into table: silver.erp_cust_az12')
 -- inserting into the table
 INSERT INTO silver.erp_cust_az12 (
 	cid,
@@ -133,6 +146,9 @@ FROM bronze.erp_cust_az12
 
 
 -- =============== silver.erp_loc_a101 ===============
+PRINT('Truncating table: silver.erp_loc_a101')
+TRUNCATE TABLE silver.erp_loc_a101;
+PRINT('Loading data into table: silver.erp_loc_a101')
 -- inserting into the table
 INSERT INTO silver.erp_loc_a101 (
 	cid,
@@ -150,6 +166,9 @@ FROM bronze.erp_loc_a101
 
 
 -- =============== silver.erp_px_cat_g1v2 ===============
+PRINT('Truncating table: silver.erp_px_cat_g1v2')
+TRUNCATE TABLE silver.erp_px_cat_g1v2;
+PRINT('Loading data into table: silver.erp_px_cat_g1v2')
 -- inserting into the table
 INSERT INTO silver.erp_px_cat_g1v2(
 	id,
