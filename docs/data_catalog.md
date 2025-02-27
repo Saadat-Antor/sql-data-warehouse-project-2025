@@ -9,7 +9,7 @@ Columns:
 | Field Name  | Data Type |     | Description |
 | ----------- | ----------- |   | ----------- |
 | customer_key      | INT       |   | Surrogate key uniquely identifying each customer record in the dimension table. |
-| Paragraph   | Text        |   |
+
 
 		
 customer_id	INT	Unique numerical identifier assigned to each customer.
