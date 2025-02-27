@@ -46,7 +46,7 @@ ON cust_i.cst_key = cust_a.cid -- left join with silver.erp_cust_az12
 
 LEFT JOIN silver.erp_loc_a101 AS cust_l
 ON cust_i.cst_key = cust_l.cid -- left join with silver.erp_loc_a101
-
+GO
 
 -- =============================================================================
 -- Create Dimension: gold.dim_products
@@ -74,7 +74,7 @@ FROM silver.crm_prd_info AS prod_i
 LEFT JOIN silver.erp_px_cat_g1v2 AS prod_c -- left join with silver.crm_prd_info
 ON prod_i.cat_id = prod_c.id
 WHERE prd_end_dt IS NULL -- filtering out historical data
-
+GO
 
 -- =============================================================================
 -- Create Dimension: gold.fact_sales
@@ -102,3 +102,4 @@ ON sls.sls_cust_id = cust.customer_id
 
 LEFT JOIN gold.dim_products AS prod -- left join with gold.dim_products
 ON sls.sls_prd_key = prod.product_number
+GO
