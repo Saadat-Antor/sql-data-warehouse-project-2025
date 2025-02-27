@@ -1,3 +1,26 @@
+/*
+===============================================================================
+DDL Script: Create Gold Views
+===============================================================================
+Script Purpose:
+    This script creates views for the Gold layer in the data warehouse. 
+    The Gold layer represents the final dimension and fact tables (Star Schema)
+
+    Each view performs transformations and combines data from the Silver layer 
+    to produce a clean, enriched, and business-ready dataset.
+
+Usage:
+    - These views can be queried directly for analytics and reporting.
+===============================================================================
+*/
+
+-- =============================================================================
+-- Create Dimension: gold.dim_customers
+-- =============================================================================
+IF OBJECT_ID('gold.dim_customers', 'V') IS NOT NULL
+    DROP VIEW gold.dim_customers;
+GO
+
 -- creating a virtual table: gold.dim_customers, for gold layer
 CREATE VIEW gold.dim_customers AS
 -- joining the tables that have customer info
@@ -25,6 +48,13 @@ LEFT JOIN silver.erp_loc_a101 AS cust_l
 ON cust_i.cst_key = cust_l.cid -- left join with silver.erp_loc_a101
 
 
+-- =============================================================================
+-- Create Dimension: gold.dim_products
+-- =============================================================================
+IF OBJECT_ID('gold.dim_products', 'V') IS NOT NULL
+    DROP VIEW gold.dim_products;
+GO
+	
 -- creating a virtual table: gold.dim_products, for gold layer
 CREATE VIEW gold.dim_products AS
 -- joining the tables that have product info
@@ -45,6 +75,13 @@ LEFT JOIN silver.erp_px_cat_g1v2 AS prod_c -- left join with silver.crm_prd_info
 ON prod_i.cat_id = prod_c.id
 WHERE prd_end_dt IS NULL -- filtering out historical data
 
+
+-- =============================================================================
+-- Create Dimension: gold.fact_sales
+-- =============================================================================
+IF OBJECT_ID('gold.fact_sales', 'V') IS NOT NULL
+    DROP VIEW gold.fact_sales;
+GO
 
 -- creating a virtual table: gold.fact_sales, for gold layer
 CREATE VIEW gold.fact_sales AS
